@@ -14,22 +14,14 @@ import {
 
 export default class LoginForm extends Component {
     render() {
-        return ( <
-            View style = { styles.container } >
-            <
-            Text style = { styles.welcome } >
-            Welcome to React Native!
-            <
-            /Text> <
-            Text style = { styles.instructions } >
-            To get started, edit index.ios.js <
-            /Text> <
-            Text style = { styles.instructions } >
-            Press Cmd + R to reload, { '\n' }
-            Cmd + D or shake
-            for dev menu <
-            /Text> <
-            /View>
+        return ( 
+            <View style = { styles.container } >
+                <Text style = { styles.welcome } > Intelligent | Balanced | Concise </Text>
+                <Text style = { styles.instructions } >
+                    Use your week.com login info
+                </Text> 
+                
+            </View>
         );
     }
 }
@@ -42,14 +34,17 @@ const styles = StyleSheet.create({
         backgroundColor: '#E30613',
     },
     welcome: {
-        fontSize: 20,
         textAlign: 'center',
         margin: 10,
+        color: 'white',
+        fontSize: 22,
+        fontWeight: "700"
     },
     instructions: {
         textAlign: 'center',
-        color: '#333333',
+        color: '#FFF',
         marginBottom: 5,
+        opacity: 0.8,
     },
 });
 
