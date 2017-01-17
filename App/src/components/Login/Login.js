@@ -14,6 +14,7 @@ export default class Login extends Component {
                 </View>
                 <View style={styles.formContainer}>
                     <LoginForm />
+                    <Text style={styles.instructions}> Use your Thweek.com credentials to login</Text>
                 </View>
             </KeyboardAvoidingView>
          );
@@ -32,12 +33,11 @@ const styles = StyleSheet.create({
     },
     instructions: {
         textAlign: 'center',
-        color: '#FFF',
-        marginBottom: 5,
-        opacity: 0.8,
+        color: 'rgba(127, 140, 141,1.0)',
+        marginBottom: 30,
     },
     logo: {
-        width: 300,
-        height:106,
+        width: 370,
+        height:122,
     }
 });
