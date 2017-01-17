@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Image } from 'react-native';
+import { StyleSheet, View, Text, Image, KeyboardAvoidingView } from 'react-native';
+import LoginForm from './LoginForm';
 
 export default class Login extends Component { 
     render() {
         return (
-            <View style={ styles.container }> 
-            <View style={ styles.logoContainer}>
-                <Image 
-                style={styles.logo}
-                source={require('../../../resources/images/logo.png')} 
-                />
-            </View>
-            <View style={styles.formContainer}>
-            </View>
-            </View>
+            <KeyboardAvoidingView behavior="padding" style={ styles.container }> 
+                <View style={ styles.logoContainer}>
+                    <Image 
+                    style={styles.logo}
+                    source={require('../../../resources/images/logo.png')} 
+                    />
+                </View>
+                <View style={styles.formContainer}>
+                    <LoginForm />
+                </View>
+            </KeyboardAvoidingView>
          );
     }
 }
@@ -21,19 +23,12 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#FFF',
+        backgroundColor: '#FFF'
     },
     logoContainer: {
         flexGrow: 1,
         justifyContent: 'center',
-        alignItems: 'center'
-    },
-    formContainer: {
-        backgroundColor: '#E30613',
-        opacity: 0.5,
-        height: 100,
+        alignItems: 'center',
     },
     instructions: {
         textAlign: 'center',
@@ -43,6 +38,6 @@ const styles = StyleSheet.create({
     },
     logo: {
         width: 300,
-        height:106
+        height:106,
     }
 });
